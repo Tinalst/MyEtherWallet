@@ -1,7 +1,7 @@
 module.exports = {
   presets: [
     ["@babel/preset-env",{
-      useBuiltIns: true,
+      useBuiltIns: "entry",
       "corejs": "core-js@3"
     }],
     ['@vue/app', { useBuiltIns: "entry" } ]
