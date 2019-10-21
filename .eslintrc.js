@@ -1,6 +1,10 @@
-const env_vars = require('./ENV_VARS');
 module.exports = {
-  globals: env_vars,
+  globals: {
+    VERSION: "readable",
+    ROUTER_MODE: "readable",
+    BUILD_TYPE: "readable",
+    NODE_ENV: "readable"
+  },
   root: true,
   env: {
     node: true
@@ -12,6 +16,7 @@ module.exports = {
     'plugin:security/recommended'
   ],
   rules: {
+    'vue/no-v-html': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-else-return': ['error', { allowElseIf: true }],
