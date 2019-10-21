@@ -1,9 +1,9 @@
 module.exports = {
   globals: {
-    VERSION: "readable",
-    ROUTER_MODE: "readable",
-    BUILD_TYPE: "readable",
-    NODE_ENV: "readable"
+    VERSION: "readonly",
+    ROUTER_MODE: "readonly",
+    BUILD_TYPE: "readonly",
+    NODE_ENV: "readonly"
   },
   root: true,
   env: {
