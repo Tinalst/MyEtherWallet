@@ -26,7 +26,11 @@ module.exports = {
     'prefer-const': 'error',
     'no-var': 'error',
     'security/detect-new-buffer': 'off',
-    'security/detect-object-injection': 'off'
+    'security/detect-object-injection': 'off',
+    'require-atomic-updates': 'off',
+    'no-prototype-builtins': 'off',
+    'no-useless-catch': 'off',
+    'no-async-promise-executor': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
