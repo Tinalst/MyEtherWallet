@@ -58,7 +58,7 @@
 
         <div class="breadcrumb-container">
           <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home
-          <span v-for="h in historyStack" v-if="h.breadcrumb" :key="h.key">
+          <span v-for="h in historyStack" v-show="h.breadcrumb" :key="h.key">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
             {{ h.breadcrumb }}
           </span>
@@ -170,7 +170,6 @@ export default {
       }
     }
   },
-  mounted() {},
   methods: {
     toggle() {
       this.$refs.DecisionTree.toggle();

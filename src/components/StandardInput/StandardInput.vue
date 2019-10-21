@@ -62,10 +62,10 @@
       <textarea
         v-if="options.isTextarea"
         ref="textareadata"
+        :disabled="options.inputDisabled"
         :readonly="options.readOnly"
         v-model="inputValue"
         :placeholder="options.placeHolder"
-        :disabled="options.inputDisabled"
         @blur="emitValue"
       />
 
@@ -122,6 +122,7 @@ export default {
         case '3':
           return 'border-green';
         default:
+          return '';
       }
     }
   },
