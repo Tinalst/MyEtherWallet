@@ -61,8 +61,8 @@
       <textarea
         v-if="options.isTextarea"
         ref="textareadata"
-        :readonly="options.readOnly"
         v-model="inputValue"
+        :readonly="options.readOnly"
         :placeholder="options.placeHolder"
         :disabled="options.inputDisabled"
         @blur="emitValue"

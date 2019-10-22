@@ -45,6 +45,7 @@
       <input
         v-if="!options.isTextarea"
         ref="inputdata"
+        v-model="inputValue"
         :readonly="options.readOnly"
         :value="options.value"
         :class="[
@@ -54,7 +55,6 @@
         :placeholder="options.placeHolder"
         :type="options.type"
         :disabled="options.inputDisabled"
-        v-model="inputValue"
         name=""
         @blur="emitValue"
       />
@@ -62,9 +62,9 @@
       <textarea
         v-if="options.isTextarea"
         ref="textareadata"
+        v-model="inputValue"
         :disabled="options.inputDisabled"
         :readonly="options.readOnly"
-        v-model="inputValue"
         :placeholder="options.placeHolder"
         @blur="emitValue"
       />

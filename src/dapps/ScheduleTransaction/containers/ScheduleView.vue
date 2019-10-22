@@ -55,9 +55,9 @@
             </div>
             <div class="the-form address-block">
               <input
-                v-ens-resolver="'address'"
                 ref="address"
                 v-model="address"
+                v-ens-resolver="'address'"
                 type="text"
                 name="name"
                 autocomplete="off"

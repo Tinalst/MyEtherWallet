@@ -5,9 +5,9 @@
         <label class="dapp-label">Dapp name</label>
         <div class="dapp-input">
           <b-form-input
-            v-validate="'required'"
             id="dappName"
             v-model="form.dappName"
+            v-validate="'required'"
             name="name"
             type="text"
             @update="updateName"
@@ -24,10 +24,10 @@
         <div class="dapp-input">
           <label class="dapp-select-label">
             <b-form-select
-              v-validate="'required'"
               id="dappCategory"
-              :options="dappCategories"
               v-model="form.category"
+              v-validate="'required'"
+              :options="dappCategories"
               name="category"
               @change="updateCategory"
             ></b-form-select>
@@ -52,10 +52,10 @@
               <tag-component
                 v-for="(tag, idx) in displayTags"
                 ref="tagContainer"
+                :key="tag + idx"
                 :name="tag"
                 :delete-func="deleteTag"
                 :idx="idx"
-                :key="tag + idx"
               />
             </div>
             <div class="dapp-input">
@@ -92,8 +92,8 @@
         </b-form-invalid-feedback>
         <div class="dapp-input">
           <b-form-textarea
-            v-validate="'max:800|required'"
             v-model="form.description"
+            v-validate="'max:800|required'"
             name="description"
             placeholder="800 characters"
             rows="7"
@@ -114,10 +114,10 @@
         <div class="dapp-input">
           <label class="dapp-select-label">
             <b-form-select
-              v-validate="'required'"
               id="dappUsMarket"
-              :options="dappUsMarketOptions"
               v-model="form.usMarket"
+              v-validate="'required'"
+              :options="dappUsMarketOptions"
               name="field"
               @change="updateUsMarket"
             ></b-form-select>
@@ -133,10 +133,10 @@
         <div class="dapp-input">
           <label class="dapp-select-label">
             <b-form-select
-              v-validate="'required'"
               id="dappStatus"
-              :options="dappStatusOptions"
               v-model="form.dappStatus"
+              v-validate="'required'"
+              :options="dappStatusOptions"
               name="status"
               @change="updateDappStatus"
             ></b-form-select>
@@ -188,9 +188,9 @@
         </label>
         <div class="dapp-input">
           <b-form-input
-            v-validate="'required'"
             id="contractAddress"
             v-model="form.contractAddress"
+            v-validate="'required'"
             name="address"
             type="text"
             @update="updateContractAddress"
@@ -305,9 +305,9 @@
       <b-form-group>
         <label class="dapp-label">Dapp website</label>
         <b-form-input
-          v-validate="'url:require_protocol'"
           id="dappWebsite"
           v-model="form.dappWebsite"
+          v-validate="'url:require_protocol'"
           name="website"
           placeholder="URL link"
           type="text"

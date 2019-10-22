@@ -13,8 +13,8 @@
           <div class="mew-custom-form__radio-button">
             <input
               v-show="providerData.length > 0"
-              v-model="providerChosen"
               :id="provider.provider"
+              v-model="providerChosen"
               :value="provider.provider"
               type="radio"
               name="provider"
